@@ -6,7 +6,7 @@ let db;
 const loadDatabase = async () => {
     if (db) { return db; }
     try {
-        const client = await MongoClient.connect(`mongodb://${DONUT_DBUSER}:${DONUT_DBPWD}@${DONUT_DBHOST}/${DONUT_DBNAME}`, {
+        const client = await MongoClient.connect(`mongodb+srv://${DONUT_DBUSER}:${DONUT_DBPWD}@${DONUT_DBHOST}/${DONUT_DBNAME}`, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
